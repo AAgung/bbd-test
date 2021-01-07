@@ -1,13 +1,42 @@
 {
     "response":"HTTP 200 OK",
     "message":"Your request has been successfuly executed",
-    "data": {
-        "today_sales":-26220185,
-        "order_paid":181,
-        "total_cancel":-71799612,
-        "order_cancel":328,
-        "order_pending":127,
-        "total_pending":35913567,
-        "total_shipping":-1002000
-    }
+    "data": [ 
+        {
+            "tanggal": "01 Oct 2019",
+            "data": {
+                "today_sales": 1000000,
+                "order_paid": 10,
+                "total_cancel": 100000,
+                "order_cancel": 1,
+                "order_pending": 50,
+                "total_pending": 5000000,
+                "total_shipping": 150000
+            }
+        },
+        {
+            "tanggal": "02 Oct 2019",
+            "data": {
+                "today_sales": 1500000,
+                "order_paid": 15,
+                "total_cancel": 0,
+                "order_cancel": 0,
+                "order_pending": 0,
+                "total_pending": 0,
+                "total_shipping": 225000
+            }
+        },
+        {
+            "tanggal": "03 Oct 2019",
+            "data": {
+                "today_sales": 2000000,
+                "order_paid": 20,
+                "total_cancel": 200000,
+                "order_cancel": 2,
+                "order_pending": 40,
+                "total_pending": 4000000,
+                "total_shipping": 300000
+            }
+        }
+    ]
 }
