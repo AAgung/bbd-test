@@ -10,7 +10,7 @@
           <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.today_sales || 0 }}</span></h6>
         </div>
       </div>
-      <div class="card mt-4">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">
             <b-icon icon="arrow-counterclockwise" variant="danger"></b-icon> 
@@ -19,7 +19,7 @@
           <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.total_cancel || 0 }}</span></h6>
         </div>
       </div>
-      <div class="card mt-4">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">
             <b-icon icon="cart" variant="warning"></b-icon> 
@@ -28,7 +28,7 @@
           <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.total_pending || 0 }}</span></h6>
         </div>
       </div>
-      <div class="card mt-4">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">
             <b-icon icon="cart" variant="primary"></b-icon> 

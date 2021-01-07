@@ -1,6 +1,7 @@
 # Note:
 
 - untuk test 3 panel kiri diatas dan panel kanan yang pie, gunakan filter tanggal dari 1 Oct 2019 - 3 Oct 2019
+- untuk menu 'Client', data yang digunakan adalah sales-overview.json
 
 # test BDD
 
