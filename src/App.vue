@@ -2,17 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/" exact>Home</router-link> |
-      <router-link to="/year-end-client">Client</router-link>
-      <!-- <router-link to="/sales-overview">Sales Overview</router-link> |
-      <router-link to="/year-end-client">YearEnd Line Client</router-link> |
-      <router-link to="/year-end-client-bar">YearEnd Bar Client</router-link> |
-      <router-link to="/bar">Bar</router-link> |
-      <router-link to="/doughnut">Doughnut</router-link> |
-      <router-link to="/pie">Pie</router-link> |
-      <router-link to="/radar">Radar</router-link> |
-      <router-link to="/polar-area">Polar Area</router-link> |
-      <router-link to="/bubble">Bubble</router-link> |
-      <router-link to="/scatter">Scatter</router-link> -->
+      <router-link to="/list-client">Client</router-link>
     </div>
 
     <div class="container">

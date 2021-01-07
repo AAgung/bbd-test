@@ -7,8 +7,8 @@
     props: ['rangeDate'],
     data () {
       return {
-        fromDate: this.rangeDate.from,
-        toDate: this.rangeDate.to,
+        fromDate: typeof this.rangeDate.from === "undefined" ? "01 Jan 2020" : this.rangeDate.from,
+        toDate: typeof this.rangeDate.to === "undefined" ? "07 Jan 2020" : this.rangeDate.to,
         chartData: {
             labels: null,
             datasets: [],

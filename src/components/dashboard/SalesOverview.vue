@@ -44,7 +44,7 @@
     methods: {
       async getData(fromDate, toDate) {
         this.setNullData();
-        
+
         let rangeDate = this.getDatesFromRange(fromDate, toDate);
         let rangeDateDt = [];
         
@@ -62,8 +62,6 @@
             this.summaryData.order_pending += o.data.order_pending;
           });
         }
-
-        // console.log(this.summaryData);
       },
       setNullData() {
         this.summaryData = {
