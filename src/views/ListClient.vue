@@ -1,11 +1,15 @@
 <template>
   <div>
-      <h3>List Client</h3>
-      <header>
+    <div class="d-flex justify-content-between">
+      <div><h3>List Client</h3></div>
+      <div>
         <date-picker :value="rangeDate" v-model="rangeDate" lang="en" format="DD-MM-YYYY" range :editable="false"></date-picker>
-      </header>
-    <hr>
-    <list-client :rangeDate="rangeDate" ref="listClient"></list-client>
+      </div>
+    </div>
+    
+    <div class="mt-2">
+      <list-client :rangeDate="rangeDate" ref="listClient"></list-client>
+    </div>
   </div>
 </template>
 

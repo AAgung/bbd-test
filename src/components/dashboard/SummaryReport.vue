@@ -1,26 +1,40 @@
 <template>
   <div class="row mt-2">
-    <div class="col-md-4">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title"><b-icon icon="credit-card" variant="success"></b-icon> Paid Orders</h5>
-          <h6 class="card-subtitle mb-2 text-muted"><span>{{ this.summaryData.order_paid || 0 }} Orders</span></h6>
+          <h5 class="card-title">
+            <b-icon icon="credit-card" variant="success"></b-icon> 
+            Total Sales <small class="text text-success"><strong>{{ this.summaryData.order_paid || 0 }} Orders</strong></small>
+            </h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.today_sales || 0 }}</span></h6>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
+      <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title"><b-icon icon="arrow-counterclockwise" variant="danger"></b-icon> Cancel Orders</h5>
-          <h6 class="card-subtitle mb-2 text-muted"><span>{{ this.summaryData.order_cancel || 0 }} Orders</span></h6>
+          <h5 class="card-title">
+            <b-icon icon="arrow-counterclockwise" variant="danger"></b-icon> 
+            Total Cancel <small class="text text-danger"><strong>{{ this.summaryData.order_cancel || 0 }} Orders</strong></small>
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.total_cancel || 0 }}</span></h6>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
+      <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title"><b-icon icon="cart" variant="warning"></b-icon> Pending Orders</h5>
-          <h6 class="card-subtitle mb-2 text-muted"><span>{{ this.summaryData.order_pending || 0 }} Orders</span></h6>
+          <h5 class="card-title">
+            <b-icon icon="cart" variant="warning"></b-icon> 
+            Total Pending <small class="text text-warning"><strong>{{ this.summaryData.order_pending || 0 }} Orders</strong></small>
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.total_pending || 0 }}</span></h6>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">
+            <b-icon icon="cart" variant="primary"></b-icon> 
+            Total Shipping
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted"><span>Rp. {{ this.summaryData.total_shipping || 0 }}</span></h6>
         </div>
       </div>
     </div>
@@ -43,6 +57,7 @@
           order_cancel: 0,
           total_pending: 0,
           order_pending: 0,
+          total_shipping: 0,
         },
       }
     },
@@ -68,6 +83,7 @@
             this.summaryData.order_cancel += o.data.order_cancel;
             this.summaryData.total_pending += o.data.total_pending;
             this.summaryData.order_pending += o.data.order_pending;
+            this.summaryData.total_shipping += o.data.total_shipping;
           });
         }
       },
@@ -79,9 +95,17 @@
           order_cancel: 0,
           total_pending: 0,
           order_pending: 0,
+          total_shipping: 0,
         }
       }
     },
     mixins: [dateMixin]
   }
 </script>
+
+<style lang="css" scoped>
+    .card {
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+</style>

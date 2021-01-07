@@ -48,16 +48,16 @@
 
           this.chartData.datasets = [
             {
-              borderWidth: 1,
+              borderWidth: 0.1,
               borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
+                '#28a745',
+                '#dc3545',
+                '#ffc107',
               ],
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                '#28a745',
+                '#dc3545',
+                '#ffc107',
               ],
               data: [totalOrderPaid, totalOrderCancel, totalOrderPending]
             }
